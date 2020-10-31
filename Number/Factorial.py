@@ -16,7 +16,7 @@ def factorial(n):
     if not n >= 0 and not int(n) == n:
         raise AssertionError("Input number is not positive integer number")
 
-    if n in [1]:
+    if n in [0,1]:
         return 1
     else:
         return n * factorial(n - 1)
@@ -32,8 +32,8 @@ def factorial_2(n):
     return res
 
 
-print("Factorial with recursion:",factorial(5.2))
+print("Factorial with recursion:",factorial(2))
 
-print("Factorial with iteration:",factorial_2(5))
+print("Factorial with iteration:",factorial_2(10))
 
 
