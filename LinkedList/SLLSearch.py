@@ -6,7 +6,7 @@ class Node:
         self.next = None
 
 
-class SLLTraverse:
+class SLLSearch:
     def __init__(self):
         self.head = None
         self.tail = None
@@ -24,7 +24,6 @@ class SLLTraverse:
             temp = temp.next
 
 # Insertion in Singly Linked List
-
     def insertSLL(self, nodeValue, location):
         newNode = Node(nodeValue)
 
@@ -82,16 +81,16 @@ class SLLTraverse:
             return "Search value does not exist in the Linked List"
 
 
-SLLTraverse = SLLTraverse()
+SLLSearch = SLLSearch()
 
-SLLTraverse.insertSLL(1, -1)
-SLLTraverse.insertSLL(2, -1)
-SLLTraverse.insertSLL(3, -1)
-SLLTraverse.insertSLL(4, -1)
+SLLSearch.insertSLL(1, -1)
+SLLSearch.insertSLL(2, -1)
+SLLSearch.insertSLL(3, -1)
+SLLSearch.insertSLL(4, -1)
 
-SLLTraverse.insertSLL(0, 0)
-SLLTraverse.insertSLL(10, 1)
-SLLTraverse.insertSLL(19, 3)
-print([node.nodeValue for node in SLLTraverse])
+SLLSearch.insertSLL(0, 0)
+SLLSearch.insertSLL(10, 1)
+SLLSearch.insertSLL(19, 3)
+print([node.nodeValue for node in SLLSearch])
 
-print(SLLTraverse.searchSLL(1))
+print(SLLSearch.searchSLL(1))
