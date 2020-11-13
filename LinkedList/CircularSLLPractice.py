@@ -99,24 +99,23 @@ class CircularLinkedList():
     # # Searching for a node in circular singly linked list
     def searchCSLL(self, searchValue):
         if self.head is None:
-            print("Singly Linked List does not exist")
-
+            return "Circular Singly Linked List does not exist"
         else:
             currentNode = self.head
-            index = 0
-
+            index = -1
             while currentNode:
-
+                index += 1
                 if currentNode.nodeValue == searchValue:
-                    return "Search value " + str(searchValue) + " is at location " + str(index)
-                    # break
+                    return str(currentNode.nodeValue) + ' at location ' + str(index)
+
                 if currentNode.next == self.head:
                     return "Search value " + str(searchValue) + " not found "
-                    # break
-                currentNode = currentNode.nodeValue
-                index += 1
+
+                currentNode = currentNode.next
+            return "Search value does not exist in the Linked List"
 
     # Delete  a node from circular singly linked list
+
     def deleteCSLLNode(self, location):
         if self.head is None:
             print("There is not any node in CSLL")
@@ -187,7 +186,7 @@ print([node.nodeValue for node in CircularSLL])
 
 # CircularSLL.traverseCSLL()
 
-# CircularSLL.searchCSLL(2)  # Error in code
+print(CircularSLL.searchCSLL(4))
 
 CircularSLL.deleteCSLLNode(5)
 print([node.nodeValue for node in CircularSLL])
